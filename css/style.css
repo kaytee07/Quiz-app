@@ -1,1 +1,121 @@
-ECHO is on.
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Raleway:wght@100;200;300&display=swap');
+:root {
+    --main-font-color: #1a1a1a;
+    --main-bg-color: white;
+    --main-theme-color: rgb(243, 168, 47);
+    --light-white: #f5f5f5;
+    --light-gray:#ccc;
+    --light-black:#282a39;
+    --container-width:768px;
+    --font-body-stack: Raleway, Charcoal, sans-Serif;
+    --font-heading-stack:"PT Serif", sans serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box ;
+}
+.container{
+    max-width: var(--container-width);
+    margin: 0 auto;
+} 
+.btn{
+    padding: 1rem 3.8rem;
+    text-transform: uppercase;
+    border: 0;
+    outline: 0;
+    opacity: 0.9;  
+    font-weight: bold;
+    transition: 0.3s all ease;  
+    border: 1px solid var(--light-black);
+}
+.btn:hover{
+    opacity: 1;
+    background: var(--light-black);
+    color:white ;
+}
+.quiz{
+    padding: 2rem 1.4rem;
+}
+.question__box{
+    text-align: center;
+}
+.question{
+    font-family: var(--font-heading-stack);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--main-font-color);
+}
+.tracker{
+    font-family: var(--font-body-stack);
+    color: var(--light-black);
+    padding: 1rem;
+}
+.progress{
+    border-radius: 4px;
+    width: 50%;
+    margin: 2rem auto;
+    background-color: var(--light-white);
+}
+.progress__bar{
+    height: 10px;
+    width: 0%;
+    background-color: var(--main-theme-color);
+    border-right: 2px solid black;
+}
+.tagline{
+    font-family: var(--font-body-stack);
+    color: var(--light-gray);
+    font-size: 1.4rem;
+}
+.choices__box{
+
+}
+.choices{
+    list-style-type: none;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.choice{
+    min-width: 300px;
+    border-radius: 4px;
+    display: block;
+    background-color: var(--light-white);
+    margin: 0.5rem auto;
+    font-family: sans-serif;
+    color: var(--light-black);
+    letter-spacing: 1.2px;
+    font-size:0.86rem ;
+}
+.label{
+    padding: 2rem 2rem;
+    display: flex;
+    
+}
+.choices input{
+    opacity: 0;
+}
+.choices input:checked + label{
+    color: var(--main-theme-color);
+}
+.choices input:checked + label i{
+    background-image: url('../img/circle-filled.svg');
+}
+.choices label i{
+    background-image: url('../img/circle-outline.svg');
+    background-size: 40px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    left: -2px;
+    margin-right: 10px;
+}
+.quiz__footer{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
